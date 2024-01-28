@@ -29,3 +29,7 @@ Learning basic rust from aalto online course for free
     
   - ### [Pros and cons](ProsAndCons.md)
 
+## Tooling
+
+## Syntax and Basic Concepts
+

@@ -1,6 +1,6 @@
 # rust2024Aalto
 
-- [x] Tooling
+- [ ] Tooling
 - [ ] Syntaxa and Basic Concepts
 - [ ] Ownership and Borrowing
 - [ ] Condiitonals and Error Handling

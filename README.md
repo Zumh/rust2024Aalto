@@ -8,4 +8,6 @@ Learning basic rust from aalto online course for free
   - ### [OWNERSHIP RULES](ownershiprules.md)
   
   - ### [MEMORYSAFETY](whyRust.md)
+    
+  - ### [Pros and cons](ProsAndCons.md)
 

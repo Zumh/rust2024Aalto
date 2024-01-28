@@ -1,5 +1,6 @@
 # rust2024Aalto
 
+- [x] Intro
 - [ ] Tooling
 - [ ] Syntaxa and Basic Concepts
 - [ ] Ownership and Borrowing

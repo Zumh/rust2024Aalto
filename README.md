@@ -1,2 +1,2 @@
 # rust2024Aalto
-This is for my resume, blogs and portfolio
+Learning basic rust from aalto online course for free

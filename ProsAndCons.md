@@ -1,0 +1,28 @@
+## Pros and Cons of Rust
+
+- Upsides
+  - Rust is performant
+  - Zero cost abstractions make efficient code quick and easy to write
+  - Compiled programs execute fast
+  - No garbage collector
+    - The only checks during runtime are for index out of bounds
+- Ergonomic error handling
+  - Recoverable errors are handled using types
+  - Parts of the program that can fail are easy to spot
+- Rust is (memory) safe
+  - Rust compiler ensures no memory bugs can happen during runtime
+    - Unless explicitly using unsafe code for advanced low-level operations
+  - Safe and efficient concurrency
+- Has a vibrant community that pushes the language and its utilities forward
+  - An extensive standard library
+  - Many useful libraries
+- Highly integrated package manager
+- Helpful compiler
+  - Not only complains about your mistakes, but suggests fixes
+- Downsides
+  - Rust is verbose
+    - Some basic operations require more code than many other languages
+  - Compilation times can be slow
+  - Writing code can often be slower than in many other contemporary languages
+    - The programmer needs to work with a very strict rule set enforced by the compiler
+  - Requires learning a unique programming paradigm.

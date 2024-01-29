@@ -19,8 +19,10 @@ https://github.com/evcxr/evcxr/blob/main/evcxr_repl/README.md
     -  $ cargo install evcxr_repl
     -  start program evcxr
     -  alias rust-repl=evcxr
-    -  $ rust-repl
+We can also do it in shell instance
+## Shell instance
 $ . $HOME/.bashrc
+$ rust-repl
 $ rust-repl
 
 Welcome to evcxr. For help, type :help

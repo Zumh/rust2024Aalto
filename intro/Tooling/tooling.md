@@ -11,6 +11,9 @@
 - https://doc.rust-lang.org/cargo/index.html
 - Create rust project and run rust from command line
   - https://doc.rust-lang.org/cargo/getting-started/first-steps.html
+- running program
+  - cargo run hello_world
+  - cargo run
 
 ## IDE for Rust
 - VSCODE with rust analyzer

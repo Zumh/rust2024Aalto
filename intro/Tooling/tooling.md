@@ -1,6 +1,9 @@
 ## Running rust on computer
 
-
+## Rustup
+- rustc
+  - Rust compiler
+  - Cargo cargo > package manager and build tool
 
 ## IDE for Rust
 - VSCODE with rust analyzer

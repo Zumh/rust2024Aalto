@@ -20,4 +20,7 @@ https://github.com/evcxr/evcxr/blob/main/evcxr_repl/README.md
     -  start program evcxr
     -  alias rust-repl=evcxr
     -  $ rust-repl
+$ . $HOME/.bashrc
+$ rust-repl
+
 Welcome to evcxr. For help, type :help

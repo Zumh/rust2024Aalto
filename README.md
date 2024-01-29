@@ -1,5 +1,7 @@
 # rust2024Aalto
 
+https://fitech101.aalto.fi/programming-languages/rust/1-introduction/
+
 - [x] Intro
 - [ ] Tooling
 - [ ] Syntaxa and Basic Concepts

@@ -11,7 +11,18 @@
 - https://doc.rust-lang.org/cargo/index.html
 - Create rust project and run rust from command line
   - https://doc.rust-lang.org/cargo/getting-started/first-steps.html
+- create project
+  - cargo new hello_world
+  - default --bin for binary program
+    - cargo new --bin hello_world or cargo new --lib hello_world // for library
+  - cd hello_world
+  - Cargo.toml is a metadata that Cargo needs for compiling the package
+  - manifest
+- cargo build
+ - compiling a rust program
+ - 
 - running program
+  - ./target/debug/hello_world 
   - cargo run hello_world
   - cargo run
 

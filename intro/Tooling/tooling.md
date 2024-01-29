@@ -6,6 +6,7 @@
   - Rust compiler
   - Cargo cargo > package manager and build tool
   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  - rustup self uninstall
  
 ### Cargo
 - https://doc.rust-lang.org/cargo/index.html

@@ -79,9 +79,17 @@ println!(abc); // error
   - 64 bit f64 better precision 
 
 ## Functions
+
 ### Defining and calling functions
+- snake case `snake_case` is recommended in Rust for function name
+- calling and defining function is same as other programming languages.
 ### Function parameters
+- func declaration and all parameter types must be defined explicitly
+- `fn simon_says(command: &str) {}`
 ### Returning from functions
+- explicit return `fn miles_to_kilometers(miles: f32) -> f32 {}`
+- implicit return `fn miles_to_kilometers(miles: f32){}`
+- main doesn't need explicit return because it return unit type ().
 
 ## Numerical computation
 ### Casting values as other types

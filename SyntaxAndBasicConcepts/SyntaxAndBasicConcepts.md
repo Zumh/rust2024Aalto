@@ -10,7 +10,15 @@
 - raw string literals `println!(r#"Backslash" \! Not a newline: \n"#);
 - `#` sign is optional but allow us to use double quote to print
 ### Comments
-
+- single line `//`
+- multiple line `/**/`
+- documentation comments `///`
+- same as `#[doc="..."]`
+- document comment can be convert to website using
+  - we can use doc comment for markdown format 
+  - rustdoc tool
+  - cargo doc
+  - cargo doc --open
 ## Variables
 ### print string
 ### Mutability

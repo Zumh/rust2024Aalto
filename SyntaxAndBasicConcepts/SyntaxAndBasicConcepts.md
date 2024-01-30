@@ -27,12 +27,22 @@
 let bac = "abc"
 println!(abc); // error 
 ```
+### print string
 - `println!("x is {first} and y is {second}", second=y, first=x); // x is 3 and y is 5.4`
 - `println!("x is {} and y is {}", x, y);`
 - `println!("x is {x} and y is {y}");`
-### print string
+
 ### Mutability
+- mutable `let mut x = 3;`
+- imutable variable is good because mutable variable can cause bug because of it change in some other program
 ### Constants
+- let vs constant
+- constant can be global and immutable
+- constant must be in capital
+  - `const RUST: &str = "is awesome";`
+- it can have expressions
+  - `const HOURS_IN_WEEK: i32 = DAYS_IN_WEEK * HOURS_IN_DAY;`
+- predefined constants are available like `let big = i32::MAX;`
 
 ## Data types
 ### Explicit data types

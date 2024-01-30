@@ -45,8 +45,38 @@ println!(abc); // error
 - predefined constants are available like `let big = i32::MAX;`
 
 ## Data types
+- statically typed "which means every variable must be known at compile-time"
+- type inference allow us to define same variable only once.
+- multiple data type have `&str` have to_lowercase, replace
+- f32 has round, abs and max.
+- https://doc.rust-lang.org/reference/types.html
 ### Explicit data types
+- explicitly define variable for floating
+- `let f1: f64 = 3.5;`
+- so that round method can round floating point number base on explicit type
+- `println!("{}", f1.round());`
 ### Primitive and custom types
+- Primitive 64 bit float f64 or 32 bit integer i32
+- strucs and enums (capitalized name by convention) are custom data types built on top of primitive
+- https://doc.rust-lang.org/rust-by-example/primitives.html
+- Custom types
+  - String > `let a_string: String = String::from("Hello, world!");`
+- scalar (integers, floats, booleans and characters) lower case
+  - single value and cannot seperate into multiple
+- compound type
+  - tuples
+  - arrays
+  - slices
+- flavors
+  - signed and unsigned
+  - 8 bit to 128 bit
+  - i8, i16, i32, i64, i128, isize
+  - u8, u16, u32, u64, u128, usize
+- Donald knuth"premature optimization is the root of all evil".
+  - stick with i32 for most cases. 
+- floting type
+  - 32 bit f32 smaller mem print and default
+  - 64 bit f64 better precision 
 
 ## Functions
 ### Defining and calling functions

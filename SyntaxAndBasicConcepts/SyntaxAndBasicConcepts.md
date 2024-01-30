@@ -20,6 +20,16 @@
   - cargo doc
   - cargo doc --open
 ## Variables
+- `let` is use for defining variables
+- print
+  - not allow to print vriable directly
+```rust
+let bac = "abc"
+println!(abc); // error 
+```
+- `println!("x is {first} and y is {second}", second=y, first=x); // x is 3 and y is 5.4`
+- `println!("x is {} and y is {}", x, y);`
+- `println!("x is {x} and y is {y}");`
 ### print string
 ### Mutability
 ### Constants

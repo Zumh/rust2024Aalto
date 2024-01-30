@@ -92,6 +92,59 @@ println!(abc); // error
 - main doesn't need explicit return because it return unit type ().
 
 ## Numerical computation
-### Casting values as other types
+- quotient truncated.
+```rust
+fn main() {
+    println!("{}", 4 / 5);  // 0
+    println!("{}", 14 / 5);  // 2
+}
 
+```
+- number/0 will becaught in compile time
+- This will result in errror when program execute because compiler didn't catch empty string length is 0
+```rust
+fn main() {
+    let zero = "".len();       // 0
+    println!("{}", 1 / zero);  // thread 'main' panicked at 'attempt to divide by zero'
+}
+
+```
+- divide by float can be safer because of it can be infinite
+```rust
+fn main() {
+    println!("{}", 4.0 / 0.0);  // inf
+    println!("{}", -1.0 / 0.0);  // -inf
+    println!("{}", 0.0 / 0.0);  // NaN
+}
+```
+- different types of number operation can cause error
+  - like adding float and integer
+  - like adding unsigned int and int value
+### Casting values as other types
+- as keyword can help us convert number to same type
+```rust
+fn main() {
+    println!("{}", 5i32 as f32); // 5.0
+    println!("{}", 1.5f32 as u8); // truncated to 1
+    println!("{}", 1.5f32.round() as u8); // 2
+    println!("{}", 65u8 as char); // 'A'
+    println!("{}", 128u8 as i8); // -128 since 127 is the largest value of i8
+    println!("{}", 'a' as i32); // 97
+}
+```
+- u8 to char converfsion is allow
+- 128 to i8 is not allow because i8 end in 127 so the result is -128. It wrap around.
+- only primitive data types can be cast.
+- custom types need to implement meethods to convert. like &str to_string result to String.
+https://doc.rust-lang.org/reference/type-coercions.html
+```rust
+fn main() {
+    let a = "String or &str?";
+    let b = a.to_string();
+    println!("{b}"); // String or &str?
+}
+
+```
+- Different way to casts
+https://doc.rust-lang.org/reference/expressions/operator-expr.html#type-cast-expressions
 ## Summary of symbols

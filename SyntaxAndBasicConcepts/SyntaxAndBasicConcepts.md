@@ -5,6 +5,10 @@
 - println!() print content in a new line
 - println!("") multiple line of string literal
 ### Excaping and raw strings
+- backslash `\` for escaping special chracters
+- `\\` will allow us to print one backslash
+- raw string literals `println!(r#"Backslash" \! Not a newline: \n"#);
+- `#` sign is optional but allow us to use double quote to print
 ### Comments
 
 ## Variables

@@ -4,7 +4,7 @@ https://fitech101.aalto.fi/programming-languages/rust/1-introduction/
 
 - [x] Intro
 - [x] Tooling
-- [ ] Syntaxa and Basic Concepts
+- [x] Syntaxa and Basic Concepts
 - [ ] Ownership and Borrowing
 - [ ] Condiitonals and Error Handling
 - [ ] Data Structures

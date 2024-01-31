@@ -20,6 +20,8 @@
   - cheap to copy like primitive scalar data type are copy (integers and others)
   - expensive one are moved  like String
 - What about functions?
-  -  
+  -  passing to a function copy/moved value and destroy variable in that function scope.
+  -  If we want to maintain the value that we pass then we must recieve value from that function return.
+  -  Variables like integers, float cheap variables won't change their value if we pass by value.
 
 ## Borrowing and dereferencing

@@ -18,6 +18,8 @@
   - When the owner goes out of scope, the value will be dropped.
 - Copying and clonging
   - cheap to copy like primitive scalar data type are copy (integers and others)
-  - expensive one are moved  like String 
+  - expensive one are moved  like String
+- What about functions?
+  -  
 
 ## Borrowing and dereferencing

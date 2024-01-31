@@ -12,5 +12,12 @@
   - Shadowing a variable from the outer scope inside a subscope does not change the variable.
 
 ## Ownership
+- Rules
+  - Each value in Rust is owned by a variable.
+  - Each value can have only one owner at a time.
+  - When the owner goes out of scope, the value will be dropped.
+- Copying and clonging
+  - cheap to copy like primitive scalar data type are copy (integers and others)
+  - expensive one are moved  like String 
 
 ## Borrowing and dereferencing

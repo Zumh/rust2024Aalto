@@ -44,3 +44,6 @@ fn main() {
 - this way we can prevent invalid reference.
 - When we want to use a value from an expression or a function that depends on borrowed data, we can use the to_owned method of a borrow to create an owned copy of the borrowed data.
 - On a &str, to_owned returns a new String, just like to_string().
+## pass by value vs pass by reference
+- pass by value make sense if we want to own the data passsed to it.
+- Otherwise we clone the data using .to_string() for String, for &str or literal string to_owned

@@ -25,3 +25,6 @@
   -  Variables like integers, float cheap variables won't change their value if we pass by value.
 
 ## Borrowing and dereferencing
+- referencing is borrwing using &symbol
+  - meaning we don't change the owner of a vriable
+-  

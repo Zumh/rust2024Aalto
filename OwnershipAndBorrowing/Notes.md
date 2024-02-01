@@ -62,3 +62,28 @@ fn main() {
 }
 
 ```
+## Mutable borrows
+- Mutable dereferencing
+```rust
+fn main() {
+    let mut x = 100;
+    let y = &mut x; // y is a reference to x
+    *y = 300; // change the value stored in x
+    println!("{x}"); // 300
+}
+
+```
+- cannot use borrow variable
+```rust
+fn main() {
+    let mut x = 100;
+    let y = &mut x; // y is a reference to x
+    *y = 300; // change the value stored in x
+    let z = x + *y; // error: cannot use `x` because it was mutably borrowed
+    println!("{z}");
+}
+
+```
+- The scope of a reference ends when it is used for the last time and the arithmetic expression is read from left to right, 
+- so the code can be fixed by simply changing the order of *y and x in *y + x.
+- The scope of reference y (the mutable reference to x) ends in the expression *y, which happens before reading x in + x, and thus the rules of references are satisfied.

@@ -100,3 +100,13 @@ fn main() {
 }
 ```
 - x = x * x; causes the errror
+## It compiles
+- The program compiles
+```rust
+fn main() {
+    let mut x = 5;
+    let y = &mut x;
+    *y += 1;
+    println!("{}", x);
+}
+```

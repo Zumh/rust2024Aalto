@@ -27,4 +27,17 @@
 ## Borrowing and dereferencing
 - referencing is borrwing using &symbol
   - meaning we don't change the owner of a vriable
--  
+-  `fn read_book(book: &String) {}`
+## The scope of references
+- while we are borrowing reference from variablek, we cannot modified the value right a way.
+- we have to do something with variable that we just borrowed using reference.
+- Then we can change value from the owner.
+```rust
+fn main() {
+    let mut book = String::from("📕");
+    let borrowed_book = &book; // borrows `book` 
+    book = String::from("📘");
+    println!("{borrowed_book}"); // error: cannot assign to `book` because it is borrowed
+    println!("{book}");
+}
+```

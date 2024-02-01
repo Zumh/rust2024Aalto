@@ -47,3 +47,18 @@ fn main() {
 ## pass by value vs pass by reference
 - pass by value make sense if we want to own the data passsed to it.
 - Otherwise we clone the data using .to_string() for String, for &str or literal string to_owned
+```rust
+fn append(s: String, prefix: String) -> String {
+    format!("{}{}", prefix, s)
+}
+
+fn main() {
+    let love = "💕".to_string();
+    let greeting = "Hello".to_string();
+    let lovely_greeting = append(greeting.clone(), love);
+    println!("{}", greeting.clone());
+    println!("{lovely_greeting}");
+    // cannot use `love` anymore due to moving
+}
+
+```

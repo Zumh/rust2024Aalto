@@ -87,3 +87,5 @@ fn main() {
 - The scope of a reference ends when it is used for the last time and the arithmetic expression is read from left to right, 
 - so the code can be fixed by simply changing the order of *y and x in *y + x.
 - The scope of reference y (the mutable reference to x) ends in the expression *y, which happens before reading x in + x, and thus the rules of references are satisfied.
+## Borrowing and dereferencing
+- &x, &mut x

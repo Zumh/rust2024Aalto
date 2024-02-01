@@ -89,3 +89,14 @@ fn main() {
 - The scope of reference y (the mutable reference to x) ends in the expression *y, which happens before reading x in + x, and thus the rules of references are satisfied.
 ## Borrowing and dereferencing
 - &x, &mut x
+- 
+## Compiles?
+```rust
+fn main() {
+    let mut x = 10;
+    let y = &x;
+    x = x * x;
+    println!("{x}, {y}");
+}
+```
+- x = x * x; causes the errror

@@ -80,5 +80,43 @@ In the context of error handling, the `panic!` macro is used to signal a critica
 
 The provided practical example illustrates how panicking can be applied. In a program managing a drink machine with a maximum capacity of 50 drinks, if the program encounters a situation where the machine is stated to have more drinks than it can physically hold, it should use the `panic!` macro to halt the program and display an appropriate error message. This demonstrates the use of panicking as a means to handle exceptional situations and communicate errors effectively in Rust programs.
 ## Optional values
+1. **Null Values in Programming Languages:**
+   - Many programming languages use a special value called `null` to represent the absence of a value.
+   - Null is often employed when a function or variable doesn't have a valid or meaningful value to return.
+
+2. **Handling Unsupported Input:**
+   - When dealing with unsupported input or invalid cases, functions may return a special value (such as an empty string or null) to indicate the absence of a meaningful result.
+
+3. **Clarity in Function Behavior:**
+   - Choosing an appropriate way to handle unsupported cases is essential for clarity in function behavior.
+   - Returning a designated value for unsupported input helps users understand the outcome and prevents unexpected behavior or errors.
+
+4. **Rust's Approach to Null Values:**
+   - Rust does not allow variables to have null values.
+   - Instead, Rust uses the `Option` type to represent the possible absence of a value.
+   - The `Option` type provides a clear and explicit way to handle situations where a value may or may not be present.
+
+5. **Avoiding Panics:**
+   - In some languages, encountering unsupported input might lead to a program panic. Rust prefers providing a structured way to handle such cases, avoiding abrupt program termination.
+
+6. **Emphasis on Safety:**
+   - Rust's design choices, like disallowing null values, contribute to the language's focus on safety and preventing common programming errors.
+
+7. **Explicit Handling with Option Type:**
+   - The use of the `Option` type in Rust makes it explicit when a value may be absent, promoting safer and more predictable code.
+
+8. **Understanding Ownership and Borrowing:**
+   - Rust's ownership and borrowing system plays a role in ensuring safe handling of values, contributing to the language's emphasis on memory safety.
+
+9. **Preventing Null-Related Bugs:**
+   - The absence of null values in Rust can help prevent certain types of bugs associated with null references in other languages.
+
+10. **Functional Programming Principles:**
+    - Rust's use of the `Option` type aligns with functional programming principles, where explicit handling of absence or optional values is preferred over null references.
+
+- Option type
+    - Some and None
+    -  
+
 
 ## Recoverable errors

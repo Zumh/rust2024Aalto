@@ -40,7 +40,7 @@ fn main() {
 ```
 
 ## Matching pattern
-- 1. **Pattern Matching in Rust:** Rust provides a match expression for conditional control flow based on pattern matching. This is similar to a switch statement in other languages but more functional and powerful.
+1. **Pattern Matching in Rust:** Rust provides a match expression for conditional control flow based on pattern matching. This is similar to a switch statement in other languages but more functional and powerful.
 
 2. **Exhaustive Matches:** Matches in Rust are exhaustive, meaning that all possible values of the type must be covered by the patterns. This ensures comprehensive handling of different scenarios.
 

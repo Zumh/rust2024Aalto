@@ -74,7 +74,11 @@ fn main() {
 ```
 
 ## Handling errors by panicking
+Errors in Rust can be handled using mechanisms such as panicking. Panicking occurs when something goes wrong in a Rust program, either due to actions leading to panic (e.g., integer division by zero) or explicitly invoking the `panic!` macro.
 
+In the context of error handling, the `panic!` macro is used to signal a critical error where the program cannot continue. It takes a format string as an argument, similar to the `print` and `println` macros, and the specified message is displayed when the program terminates.
+
+The provided practical example illustrates how panicking can be applied. In a program managing a drink machine with a maximum capacity of 50 drinks, if the program encounters a situation where the machine is stated to have more drinks than it can physically hold, it should use the `panic!` macro to halt the program and display an appropriate error message. This demonstrates the use of panicking as a means to handle exceptional situations and communicate errors effectively in Rust programs.
 ## Optional values
 
 ## Recoverable errors

@@ -59,6 +59,19 @@ fn main() {
 9. **Match Target Expressions:** The expressions after the => in match arms work similarly to branches in if expressions. They can be any expression as long as they evaluate to a value of the correct type or return early from the function.
 
 10. **Redundant Variables:** The use of variable patterns may introduce redundant variables. The underscore wildcard pattern can be used to match any value while ignoring it, addressing the issue of unused variable warnings.
+- Match Guard
+- do not guard the the last arm because compiler cannot determine a collection of guards cover all possible cases of a pattern.
+```rust
+fn main() {
+    let x = -10;
+    let polarity = match x {
+        0 => "neutral",
+        _ if x > 0 => "positive",
+        _  => "negative", // problem?
+    };
+    println!("{polarity}");
+}
+```
 
 ## Handling errors by panicking
 

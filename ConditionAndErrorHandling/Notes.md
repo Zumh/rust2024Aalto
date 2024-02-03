@@ -116,7 +116,25 @@ The provided practical example illustrates how panicking can be applied. In a pr
 
 - Option type
     - Some and None
-    -  
+```rust
+fn roman_numeral(num: usize) -> Option<String> {
+    match num {
+        1..=3 => Some("I".repeat(num)),
+        4 | 9 => Some("I".to_string() + &roman_numeral(num + 1).unwrap_or_default()),
+        5..=8 => Some("V".to_string() + &roman_numeral(num - 5).unwrap_or_default()),
+        10..=39 => Some("X".to_string() + &roman_numeral(num - 10).unwrap_or_default()),
+        _ => None, 
+    }
+}
+fn main() {
+    println!(
+        "{} + {} = {}",
+        roman_numeral(14).unwrap(),
+        roman_numeral(19).unwrap(),
+        roman_numeral(14 + 19).unwrap()
+    );
+}
+```
 
 
 ## Recoverable errors

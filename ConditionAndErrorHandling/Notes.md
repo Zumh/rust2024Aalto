@@ -193,4 +193,28 @@ fn main() {
 }
 ```
 - Rust is able to hint that None is of type Option<T>, but it also needs to know what it is an option of — that's the <T> part in the type
+- Destructuring Options and if let
+- if let $pattern = $expression
+- if let requires the lefthand and righthand sides to be the same type.
+```rust
+fn main() {
+    let some_text = Some("text");
+
+    if let None = some_text {
+        println!("The value is None"); // no match, no execution
+    }
+
+    if let Some("other") = some_text {
+        println!("The value is other"); // no match, no execution
+    }
+
+    if let Some("text") = some_text {
+        println!("The value is text"); // match, therefore execution
+    }
+    else if let Some(value) = some_text {
+        println!("The value is {value}"); // match on previous branch, no execution
+    }
+}
+
+```
 ## Recoverable errors

@@ -135,6 +135,62 @@ fn main() {
     );
 }
 ```
+- Printing an Option and debug formatting
+- dbug formatting is an option when we cannot printed out some Rust types
+```rust
+fn main() {
+    let maybe_x: Option<i32> = Some(5);
+    println!("{maybe_x:?}"); // Some(5)
+}
 
+```
+- gdb! macro
+- instead of {:?} we canuse gdb macro
+- dbg! macro print the filename, line number and debugged expression, it also returns the argument so that we can debug parts of expressions without having to extract them
+```rust
+fn main() {
+    let x = Some(1);
+    dbg!(x); // [src/main.rs:3] x = Some(1)
+    let y = dbg!(x.unwrap()) + 6; // x.unwrap() = 1
+    dbg!(y); // y = 7
+}
+```
+- Handling null values
+    - handling null errors by explicityl causing program to crash if value is None.
+    - unrapping option using unwrap() is one way.
+    ```rust
+    fn main() {
+    let mut maybe3 = Some(3);
+    let three: i32 = maybe3.unwrap();
+    println!("{three}"); // 3
 
+    maybe3 = None;
+    println!("{}", maybe3.unwrap()); // panic, called unwrap() on a None value
+    }
+    ```
+    - custom unwrap is also a good idea for meaning full errror with avoiding crashing
+    ```rust
+        fn main() {
+        let mut maybe_a_value = Some("value");
+        println!("{}", maybe_a_value.unwrap_or("null")); // value
+        maybe_a_value = None;
+        println!("{}", maybe_a_value.unwrap_or("null")); // null
+        }
+    ```
+    - expect is another way to custom error message
+    ```rust
+    fn main() {
+    let bob: Option<bool> = None;
+    println!("{}", bob.expect("bob does not have a value")); // thread 'main' panicked at 'bob does not have a value'
+    }
+    ```
+    
+- None and its type
+```rust
+#![allow(unused)]
+fn main() {
+    let x: Option<i32> = None;
+}
+```
+- Rust is able to hint that None is of type Option<T>, but it also needs to know what it is an option of — that's the <T> part in the type
 ## Recoverable errors

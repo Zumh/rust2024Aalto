@@ -218,3 +218,65 @@ fn main() {
 
 ```
 ## Recoverable errors
+- unwrap_or, is_ok, is_err
+```rust
+fn main() {
+    let result: Result<&str, ()> = Ok("🦀"); // The error type is unit, needs explicit type for compiler
+    let error = Err("💥"); // No explicit type, both ok and err variant types can inferred from usage
+ 
+    println!("{}, {}", result.unwrap(), error.unwrap_or("🦀"));
+
+    if result.is_ok() {
+        println!("The result seems ok");
+    }
+    if error.is_err() {
+        println!("The result seems not ok");
+        error.expect("💥💥");
+    }
+}
+```
+- Option variants match Ok and Err
+```rust
+fn main() {
+    let mut result: Result<(), String> = Ok(());
+    match result {
+        Ok(value) => println!("The value is {value:?}"),
+        Err(error) => println!("The error is {error}"),
+    }
+
+    result = Err("💥".to_string());
+
+    if let Ok(value) = result {
+        println!("The value is {value:?}");
+    }
+    else if let Err(error) = result {
+        println!("The error is {error}");
+    }
+}
+
+```
+- Returning a Result from a function requires both Ok and Err to be explicitly defined.
+```rust
+fn agi9000(question: &str) -> Result<String, String> {
+    match question {
+        "what is the meaning of life?" => Ok("42".to_string()),
+        _ if question.ends_with("?") => Ok("probably yes".to_string()),
+        _ => Err("this is not a question!".to_string()),
+    }
+}
+
+fn ask_computer(question: &str) {
+    println!("Asking the computer: {question}");
+    let answer = agi9000(question);
+    match answer {
+        Ok(answer) => println!("Computer's answer: {answer}"),
+        Err(message) => println!("ERROR: {message}"),
+    };
+}
+
+fn main() {
+    ask_computer("what is the meaning of life?");
+    ask_computer("can I have a pet dragon?");
+    ask_computer("all your codebase are belong to us.");
+}
+```

@@ -56,6 +56,19 @@ fn move_up((_, y): &mut (i32, i32)) {
     *y += 1;
 }
 ```
+- ownership
+- to_owned() create a owned String struct of three.
+- Which can be a problem if we don't want to move ownership.
+```rust
+let mut t = (1, 2.0, "three".to_owned());
+let t2 = t.clone();
+t.0 = 0;
+```
+```rust
+let mut t = (1, 2.0, "three");
+let t2 = t;
+t.0 = 3;
+```
 ## Arrays
 ## Slices
 ## Vectors

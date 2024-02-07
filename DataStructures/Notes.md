@@ -86,6 +86,7 @@ fn main() {
 - Array allow runtime index access with dynamic value.
 - Tuple need compile time constants number for index accessing. no dyanamic runtime access.
 - Array index must be unsigned integer number only.
+- [T; N], where T is the type of each element and N is the number of elements in the array
 - Do not initialize array in decrease or increase in size
 ```rust
 #![allow(unused)]

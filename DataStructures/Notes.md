@@ -83,6 +83,8 @@ fn main() {
     println!("{:?}", ones);
 }
 ```
+- Array allow runtime index access with dynamic value.
+- Tuple need compile time constants number for index accessing. no dyanamic runtime access.
 ## Slices
 ## Vectors
 ## Maps

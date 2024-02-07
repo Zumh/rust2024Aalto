@@ -109,6 +109,19 @@ fn main() {
 - .get() return None if out of bound and doesn't cause panick.
 - if pass then it return Some wrap the value.
 - no specific mutable and imutable element.
+- Moving array element string type to another variable is not allow
+```rust
+fn main() {
+    let cardinals = [
+        "blue grosbeak".to_string(),
+        "lemon-spectacled tanager".to_string(),
+        "northern cardinal".to_string()
+    ];
+    let second_bird = cardinals[1]; // error: cannot move out of a non-copy array
+    println!("{}", second_bird);
+```
+- we can borrow with & and we can clone
+- numbers are are different we can copy them instead of moving their ownership
 
 ## Slices
 ## Vectors

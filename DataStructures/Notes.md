@@ -45,6 +45,17 @@ fn main() {
     println!("min: {:?}", min);
 }
 ```
+- mutable tuples
+```rust
+fn move_up(point: &mut (i32, i32)) {
+    point.1 += 1;
+}
+```
+```rust
+fn move_up((_, y): &mut (i32, i32)) {
+    *y += 1;
+}
+```
 ## Arrays
 ## Slices
 ## Vectors

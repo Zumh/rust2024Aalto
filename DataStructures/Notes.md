@@ -96,6 +96,19 @@ fn main() {
     array = [4, 3, 2, 1];
 }
 ```
+- Error Handling
+```rust
+fn main() {
+    let a = [1, 2, 3, 4];
+    let x: Option<&i32> = a.get(3);
+    println!("{x:?}"); // Some(4)
+    let whoops = a.get(4);
+    println!("{whoops:?}"); // None
+}
+```
+- .get() return None if out of bound and doesn't cause panick.
+- if pass then it return Some wrap the value.
+- no specific mutable and imutable element.
 
 ## Slices
 ## Vectors

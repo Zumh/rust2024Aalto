@@ -70,6 +70,19 @@ let t2 = t;
 t.0 = 3;
 ```
 ## Arrays
+- Fixed size and must be same type
+- we can initialize with same value x size.
+```rust
+fn main() {
+    let a = [1, 2, 3, 4];
+    println!("{:?}", a);
+
+    // We can also initialize an array of desired size
+    // with the same value for each element
+    let ones = [1; 10];
+    println!("{:?}", ones);
+}
+```
 ## Slices
 ## Vectors
 ## Maps

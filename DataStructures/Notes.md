@@ -86,6 +86,16 @@ fn main() {
 - Array allow runtime index access with dynamic value.
 - Tuple need compile time constants number for index accessing. no dyanamic runtime access.
 - Array index must be unsigned integer number only.
+- Do not initialize array in decrease or increase in size
+```rust
+#![allow(unused)]
+fn main() {
+    let mut array: [i32; 4] = [1, 2, 3, 4];
+    // array = [3, 2, 1]; // type mismatch
+    array = [4, 3, 2, 1];
+}
+```
+
 ## Slices
 ## Vectors
 ## Maps

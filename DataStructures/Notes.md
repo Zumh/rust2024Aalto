@@ -135,10 +135,30 @@ fn main() {
 }
 ```
 - Just copying value also require
-`fn to_zeros(mut array: [i32; 3]) -> [i32; 3] {
+```rustfn to_zeros(mut array: [i32; 3]) -> [i32; 3] {
     array.fill(0);
     array
-}`
+}
+```
+- Checking with contains require &char
+```rust
+fn main() {
+    let array_of_chars = ['a', 'r', 'r', 'a', 'y'];
+    println!("{}", array_of_chars.contains(&'y'));
+}
+```
+- Sort array in increasing order
+```rust
+fn main() {
+    let mut points = [(4, 0), (1, 3), (2, 3), (2, 1)];
+    points.sort();
+    println!("{points:?}");
+    let mut strings = ["1 second", "then b", "0 first", "a < t", "then a"];
+    strings.sort();
+    println!("{strings:?}");
+}
+```
+- get method from array is actually from slices.
 
 
 ## Slices

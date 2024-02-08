@@ -122,6 +122,24 @@ fn main() {
 ```
 - we can borrow with & and we can clone
 - numbers are are different we can copy them instead of moving their ownership
+- Modified array in function need mut reference
+```rust
+fn to_zeros(array: &mut [i32; 3]) {
+    array.fill(0);
+}
+
+fn main() {
+    let mut a = [1, 2, 3];
+    to_zeros(&mut a);
+    println!("{a:?}"); // [0, 0, 0]
+}
+```
+- Just copying value also require
+`fn to_zeros(mut array: [i32; 3]) -> [i32; 3] {
+    array.fill(0);
+    array
+}`
+
 
 ## Slices
 ## Vectors

@@ -4,5 +4,6 @@ fn main() {
      \  (oo)\_______
         (__)\       )\/\
             ||----w |
-            ||     ||")
+            ||     ||");
+ println!(r#""Backslash" \! Not a newline: \n"#);
 }

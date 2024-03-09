@@ -1,0 +1,3 @@
+- Variables are only accessible in the scope they are defined in. 
+- This is called lexical (aka static) scoping. 
+- Each function has its own scope, and variables that are defined in the function are accessible only inside that function.

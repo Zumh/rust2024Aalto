@@ -1,3 +1,4 @@
 - aalto.fi Rust 2024
 - https://fitech101.aalto.fi/programming-languages/rust/
+- https://learning-rust.github.io/docs/ownership/
 - rustc <file>.rs

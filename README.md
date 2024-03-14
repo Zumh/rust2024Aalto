@@ -19,3 +19,17 @@
 - Textbooks: [Slides](https://docs.google.com/presentation/d/1NMg08N1LUNDPuMxNZ-UMbdH13p8LXgMM3esbWRMowhU/edit?usp=sharing)
 - Assignments: [Homework](https://github.com/kaist-cp/cs431/tree/main/homework)
 
+## Are we Game yet Rust
+- https://arewegameyet.rs/
+
+## Web GPU
+- https://wgpu.rs/
+
+## OPEN API
+- https://www.openapis.org/
+
+## Embedded
+- https://www.theembeddedrustacean.com/
+- https://www.rust-lang.org/what/embedded
+- https://softsec.cs.utah.edu/papers/RustPerf.pdf
+- https://dallasrust.github.io/colophon

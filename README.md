@@ -31,5 +31,4 @@
 ## Embedded
 - https://www.theembeddedrustacean.com/
 - https://www.rust-lang.org/what/embedded
-- https://softsec.cs.utah.edu/papers/RustPerf.pdf
 - https://dallasrust.github.io/colophon

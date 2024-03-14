@@ -13,4 +13,9 @@
 - https://slint.dev/pricing
 
 ## Concurrent programing
-- https://csdiy.wiki/en/%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cs431/#descriptions
+- https://github.com/kaist-cp/cs431
+- Course Website:[Website](https://github.com/kaist-cp/cs431)
+- Recordings:[Youtube](https://www.youtube.com/playlist?list=PL5aMzERQ_OZ9j40DJNlsem2qAGoFbfwb4)
+- Textbooks: [Slides](https://docs.google.com/presentation/d/1NMg08N1LUNDPuMxNZ-UMbdH13p8LXgMM3esbWRMowhU/edit?usp=sharing)
+- Assignments: [Homework](https://github.com/kaist-cp/cs431/tree/main/homework)
+

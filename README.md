@@ -1,4 +1,4 @@
-- aalto.fi Rust 2024
+## aalto.fi Rust 2024
 - rustc <file>.rs
 - https://fitech101.aalto.fi/programming-languages/rust/
 - https://doc.rust-lang.org/book/

@@ -17,3 +17,15 @@ Despite the value of a unit type being a tuple, it is not considered a compound 
 ### Compound Types
 - Arrays like [1, 2, 3]
 - Tuples like (1, true)
+
+### Static Typing 
+- Rust is a strictly statically typed language. This means that 
+- Ans: every variable type needs to be known at compile time.
+
+### Valid variable types
+- Select the option that does NOT result in an error in a Rust program.
+- let i32 = 42;
+
+### Valid variable types 2
+- Select the option that does NOT result in an error in a Rust program.
+- ans: let money: f64 = 2.718;

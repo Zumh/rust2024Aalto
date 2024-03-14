@@ -32,3 +32,6 @@
 - https://www.theembeddedrustacean.com/
 - https://www.rust-lang.org/what/embedded
 - https://dallasrust.github.io/colophon
+
+## Rust Visualization
+- https://rust-book.cs.brown.edu/

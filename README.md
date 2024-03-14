@@ -15,6 +15,12 @@
 - https://rwth-os.github.io/eduOS-rs/
 - https://slint.dev/pricing
 
+## Rust Action
+- https://github.com/rust-in-action/code
+
+## Zero To Production
+- https://github.com/LukeMathWalker/zero-to-production
+
 ## Concurrent programing
 - https://github.com/kaist-cp/cs431
 - Course Website:[Website](https://github.com/kaist-cp/cs431)

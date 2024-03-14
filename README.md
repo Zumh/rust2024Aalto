@@ -9,6 +9,7 @@
 
 ## Simpler version Rust 
 - https://moodle.cs.pdx.edu/
+- https://moodle.cs.pdx.edu/course/view.php?id=15
 
 ## Rust OS
 - https://os.phil-opp.com/

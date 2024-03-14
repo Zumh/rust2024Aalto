@@ -7,6 +7,9 @@
 - https://learning-rust.github.io/docs/ownership/
 - https://lborb.github.io/book/official.html
 
+## Simpler version Rust 
+- https://moodle.cs.pdx.edu/
+
 ## Rust OS
 - https://os.phil-opp.com/
 - https://rwth-os.github.io/eduOS-rs/

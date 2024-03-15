@@ -1,4 +1,5 @@
-## Vim 
+## Rust Vim 
+- https://github.com/rust-lang/rust.vim
 ```vimplugin
  call plug#begin()
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -8,7 +9,8 @@
  call plug#end()
  set relativenumber
 ```
-## Codeium setup
+## Codeium setup Vim
+- https://codeium.com/vim_tutorial
 - :Codeium Auth
 - token paste from the website
 
@@ -20,3 +22,9 @@
 ## fzf
 
 - :Files -> for searching files in fzf
+## compile rust normally 
+- rustc hello.rs
+## how to run rust and debug 
+- rustc -g hello.rs
+- ./hello
+- gdb ./hello

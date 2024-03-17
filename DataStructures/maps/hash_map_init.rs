@@ -11,6 +11,18 @@ fn main(){
 
     println!("\n\n Modifying hashmap");
     modifying();
+
+    println!("\n\n Modifying with entry hashmap");
+    modifying_with_entry();
+}
+
+fn modifying_with_entry(){
+    let mut food_prices = HashMap::from([("beetroot", 1.2), ("cabbage", 1.1)]);
+    println!("Before inflation {:#?}", food_prices);
+    let beetroot_price: &mut f32 = food_prices.entry("beetroot").or_insert(1.3);
+    *beetroot_price *= 1.2;
+
+    println!("After inflation {:#?}", food_prices);
 }
 
 fn modifying(){

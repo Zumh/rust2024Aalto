@@ -4,5 +4,8 @@ fn main(){
     println!("{:?}", std::str::from_utf8(&hello));
     // here we have invalid utf8 sequence
     let not_utf8 = [104, 101, 108, 108, 111, 32, 255, 33];
-    println!("{:?}", std::str::from_utf8(&not_utf8));
+    //println!("{:?}", std::str::from_utf8(&not_utf8));
+
+    // lossy bytes to string
+    println!("{:?}", String::from_utf8_lossy(&not_utf8));
 }

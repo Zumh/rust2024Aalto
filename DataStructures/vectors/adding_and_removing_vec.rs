@@ -20,7 +20,7 @@ fn main() {
     println!("{v2:?}"); // [1, 2, 3]
     println!("\n\nremoving"); 
     removing();
-
+    // vector doesn't have remove method directly
 }
 
 fn removing() {

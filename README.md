@@ -1,3 +1,5 @@
+## rust std
+- https://doc.rust-lang.org/std/
 ## aalto.fi Rust 2024
 - rustc <file>.rs
 - https://fitech101.aalto.fi/programming-languages/rust/

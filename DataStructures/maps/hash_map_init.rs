@@ -1,5 +1,5 @@
 
-use std::collections::HashMap;
+use std::collections::{HashMap, hash_map::Entry};
 
 fn main(){
     println!("hash map new initialization");
@@ -14,9 +14,33 @@ fn main(){
 
     println!("\n\n Modifying with entry hashmap");
     modifying_with_entry();
+
+    println!("\n\n Entry type match");
+    entry_type_match();
 }
 
+fn entry_type_match(){
+    // use String instead of &str to avoid lifetime collision
+    let mut food_prices = HashMap::from([("beetroot".to_string(), 1.2)]);
+    print_price(&mut food_prices, "beetroot");
+    print_price(&mut food_prices, "cabbage");
+}
+// Entry type Occupied and Vacant
+fn print_price(prices: &mut HashMap<String, f32>, item: &str) {
+    // match handle them enum type 
+    match prices.entry(item.to_string()) {
+        Entry::Occupied(entry) => {
+            println!("{}", *entry.get());
+        },
+        Entry::Vacant(entry) => {
+            println!("No price available for {}", entry.key());
+        }
+    }
+}
+
+
 fn modifying_with_entry(){
+    // entry return mutable ref and we can modifty that using or_insert
     let mut food_prices = HashMap::from([("beetroot", 1.2), ("cabbage", 1.1)]);
     println!("Before inflation {:#?}", food_prices);
     let beetroot_price: &mut f32 = food_prices.entry("beetroot").or_insert(1.3);

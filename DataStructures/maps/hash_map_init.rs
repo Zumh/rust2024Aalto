@@ -21,6 +21,7 @@ fn main(){
 
 fn entry_type_match(){
     // use String instead of &str to avoid lifetime collision
+    // prices are mutable because entry return mutable ref
     let mut food_prices = HashMap::from([("beetroot".to_string(), 1.2)]);
     print_price(&mut food_prices, "beetroot");
     print_price(&mut food_prices, "cabbage");
@@ -30,9 +31,11 @@ fn print_price(prices: &mut HashMap<String, f32>, item: &str) {
     // match handle them enum type 
     match prices.entry(item.to_string()) {
         Entry::Occupied(entry) => {
+            // *entry.get() means get the value inside the entry
             println!("{}", *entry.get());
         },
         Entry::Vacant(entry) => {
+            // entry.key() means get the key inside the entry
             println!("No price available for {}", entry.key());
         }
     }

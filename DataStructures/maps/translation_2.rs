@@ -13,7 +13,11 @@ fn eng_fin_dictionary() -> HashMap<String, String> {
 }
 
 fn translate_fin(dictionary: &HashMap<String, String>, word: &str) -> String {
-    
+    match dictionary.get(word) {
+        Some(translation) => format!("{word} in Finnish is {translation}"),
+        None => format!("sorry, no translation for {word} available"),
+    }
+    /*    
     if !dictionary.contains_key(word) {
         return format!("sorry, no translation for {} available", word);
     }
@@ -21,7 +25,7 @@ fn translate_fin(dictionary: &HashMap<String, String>, word: &str) -> String {
     
     // format the word and fin
     return format!("{} in Finnish is {}", word, fin);
-    
+  */  
 }
 fn main() {
     let dictionary: HashMap<String, String> = eng_fin_dictionary();

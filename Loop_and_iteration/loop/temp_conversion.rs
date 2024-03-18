@@ -30,8 +30,10 @@ fn fahrenheit_to_celcius(fahrenheit: f32) -> f32 {
     (fahrenheit - 32.0) * 5.0 / 9.0
 }
 fn replace_f_to_c() {
+
+    // iter_mut() conversion
     let mut fahrenheit = [0.0, 37.5, 100.0];
-    for f in &mut fahrenheit {
+    for f in fahrenheit.iter_mut() {
         *f = fahrenheit_to_celcius(*f);
     }
     println!("celcius: {:?}", fahrenheit);

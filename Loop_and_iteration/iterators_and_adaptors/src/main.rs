@@ -1,7 +1,7 @@
 //mod modules;
 mod modules;
 use modules::for_each_celsius_to_fahrenheit::c_to_f_temp;
-use modules::map_collection_celsius_to_fahrenheit::c_to_f_map;
+use modules::into_collection_celsius_to_fahrenheit::c_to_f_map;
 use modules::consuming_iterators_miles_to_km::miles_to_kilometers_map;
 
 // celsius to fahrenheit

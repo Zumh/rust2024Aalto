@@ -11,7 +11,10 @@ use modules::{
     difference_in_iter_into_iter::difference_in_iter_into_iter,
     nth_number_array::nth_number,
     nth_methods::nth_methods,
-    iterate_one_at_a_time::iterate_one_at_a_time
+    iterate_one_at_a_time::iterate_one_at_a_time,
+    mapping_distances::mapping_distances,
+    summing_values::summing_values,
+    nths::nths,    
 };
 
 // celsius to fahrenheit
@@ -49,4 +52,15 @@ fn main() {
 
     println!("\n\n## iterate one at a time");
     iterate_one_at_a_time();
+
+    println!("\n\n## mapping distances");
+    mapping_distances();
+
+    println!("\n\n## summing values");
+    summing_values();
+
+    println!("\n\n## nths");
+    nths();
+
+
 }

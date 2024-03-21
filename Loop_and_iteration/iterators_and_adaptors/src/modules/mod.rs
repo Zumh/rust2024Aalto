@@ -10,3 +10,6 @@ pub mod difference_in_iter_into_iter;
 pub mod nth_number_array;
 pub mod nth_methods;
 pub mod iterate_one_at_a_time;
+pub mod mapping_distances;
+pub mod summing_values;
+pub mod nths;

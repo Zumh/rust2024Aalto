@@ -2,3 +2,11 @@
 pub mod for_each_celsius_to_fahrenheit;
 pub mod into_collection_celsius_to_fahrenheit;
 pub mod consuming_iterators_miles_to_km;
+pub mod generic_function;
+pub mod generic_absolute_numbers;
+pub mod are_positive;
+pub mod iter_m_to_k_count_sum;
+pub mod difference_in_iter_into_iter;
+pub mod nth_number_array;
+pub mod nth_methods;
+pub mod iterate_one_at_a_time;

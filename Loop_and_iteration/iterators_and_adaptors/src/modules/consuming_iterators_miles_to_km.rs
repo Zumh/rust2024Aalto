@@ -11,7 +11,9 @@
         //   collect() collects the Iterator into a collection
         //   map consumes the iterator and applies a function
         //   we create a new collection that converts miles to kilometers
-        let kilometers = miles.iter().map(miles_to_kilometers).collect::<Vec<f64>>();
+        let kilometers: Vec<f64> = miles.iter().map(miles_to_kilometers).collect::<Vec<f64>>();
+        // before iterator remain the same 
         println!("miles: {:?}", miles);
+        // after iterator calculate and produce collect
         println!("kilometers: {:?}", kilometers);
     }   

@@ -90,6 +90,7 @@ pub fn iterator_zoo() {
         println!("increasing: {increasing:?}");
     
         // Flatten a vector of tuples using flatten
+        // we discarding second element and faltten the first element then create a new vector
         let flat = a.iter().map(|num| [*num, 0])
             .flatten().collect::<Vec<i32>>();
         assert_eq!(flat, &[1, 0, 5, 0, 3, 0, 2, 0]);
@@ -97,6 +98,8 @@ pub fn iterator_zoo() {
 
         // Find the longest word using max_by_key
         let numbers = [(1, "one"), (2, "two"), (3, "three"), (4, "four")];
+        // find the maximum value based on the length of assosiated word
+        // the length of the word should be use as the key for comparison
         let longest_number = numbers.iter().max_by_key(|(_num, word)| word.len());
         assert_eq!(longest_number, Some(&(3, "three")));
         println!("longest_number: {longest_number:?}");

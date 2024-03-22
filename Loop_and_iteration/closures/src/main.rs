@@ -10,6 +10,17 @@ use modules::{
         find_first_match,
         iterator_zoo
     },
+    enumerating_iterators::{
+        calling_enumerate_on_iterators,
+        enumerate_forloop,
+        push_everything_together,
+        clone_enumerated,
+        reverse_fruits,
+        string_stream_processing,
+        mutating_strings,
+        pruning_domains
+    }
+
 };
 
 // celsius to fahrenheit
@@ -33,7 +44,18 @@ fn main() {
     filter_country_populations();
     // find first match
     find_first_match();
-
     // iterator zoo
     iterator_zoo();
+
+    // enumerating iterators
+    calling_enumerate_on_iterators();
+    enumerate_forloop();
+    push_everything_together();
+    clone_enumerated();
+
+    // reverse index
+    reverse_fruits();
+    string_stream_processing();
+    mutating_strings();
+    pruning_domains();
 }

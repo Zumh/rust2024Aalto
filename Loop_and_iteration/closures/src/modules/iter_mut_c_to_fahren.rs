@@ -22,3 +22,15 @@ pub fn wrap_print_macro() {
 
 }
 
+pub fn zip_miles_to_kms() {
+        println!("\n\nzip_miles_to_kms");
+        // iterating over two iterators and print them converting miles to kilometers
+        let miles = [1.0f64, 3.0, 10.0, 100.0];
+        let kilometers = miles.iter().map(|m| m * 1.609).collect::<Vec<_>>();
+        miles
+            .iter()
+            .zip(kilometers.iter())
+            .for_each(|(m, k)| println!("{m} miles equals {k} kilometers"));
+
+}    
+

@@ -11,7 +11,6 @@ This works in both Windows and Unix-like systems.
 */
 // Make the function read_line in the starter code safer by handling possible errors by returning a Result instead of a String so that it works as the main function expectsuse std::io;
 use std::io;
-use std::str;
 
 // Modify read_line to work with the updated main function
 fn read_line() -> io::Result<String> {

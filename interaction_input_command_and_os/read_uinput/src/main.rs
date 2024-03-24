@@ -3,6 +3,7 @@ use modules::{
     read_user_input,
     read_line,
     when_bytes_arent_utf_8,
+    parsing_simple_arithmetic_expressions,
 };
 fn main() {
     //read_user_input::read_user_input();
@@ -23,6 +24,7 @@ fn main() {
 
     //read_line::read_line_from_stdin();
 
-    when_bytes_arent_utf_8::bytes_arent_utf_8();
+    //when_bytes_arent_utf_8::bytes_arent_utf_8();
 
+    parsing_simple_arithmetic_expressions::parsing_input_into_numbers();
 }

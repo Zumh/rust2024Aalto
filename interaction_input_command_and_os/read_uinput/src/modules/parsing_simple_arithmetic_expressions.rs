@@ -1,6 +1,7 @@
 use std::io;
 /*
 // model solution
+// If failed to parse then panic otherwise return original error
 fn read_line() -> io::Result<String> {
     io::stdin()
         .lines()

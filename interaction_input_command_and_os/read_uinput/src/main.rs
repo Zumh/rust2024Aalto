@@ -4,6 +4,8 @@ use modules::{
     read_line,
     when_bytes_arent_utf_8,
     parsing_simple_arithmetic_expressions,
+    command_line_arg_and_env,
+    cowsay,
 };
 fn main() {
     //read_user_input::read_user_input();
@@ -26,5 +28,12 @@ fn main() {
 
     //when_bytes_arent_utf_8::bytes_arent_utf_8();
 
-    parsing_simple_arithmetic_expressions::parsing_input_into_numbers();
+    //parsing_simple_arithmetic_expressions::parsing_input_into_numbers();
+    
+    //command_line_arg_and_env::echo();
+    //command_line_arg_and_env::multiplying_two_args_values();
+    //command_line_arg_and_env::product_of_two_args();
+
+    //command_line_arg_and_env::environment_variable();
+    cowsay::cow_say();
 }

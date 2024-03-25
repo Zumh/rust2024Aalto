@@ -4,3 +4,5 @@ pub mod when_bytes_arent_utf_8;
 pub mod parsing_simple_arithmetic_expressions;
 pub mod command_line_arg_and_env;
 pub mod cowsay;
+pub mod cowsay_options;
+pub mod animals_from_the_environment;

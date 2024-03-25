@@ -6,6 +6,9 @@ use modules::{
     parsing_simple_arithmetic_expressions,
     command_line_arg_and_env,
     cowsay,
+    cowsay_options,
+    animals_from_the_environment
+    
 };
 fn main() {
     //read_user_input::read_user_input();
@@ -35,5 +38,9 @@ fn main() {
     //command_line_arg_and_env::product_of_two_args();
 
     //command_line_arg_and_env::environment_variable();
-    cowsay::cow_say();
+    //cowsay::cow_say();
+    //cowsay_options::cow_say_options();
+
+    animals_from_the_environment::animals_from_the_environment();
+    
 }

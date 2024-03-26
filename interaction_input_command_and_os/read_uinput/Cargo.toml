@@ -1,5 +1,5 @@
 [package]
-name = "read_uinput"
+name = "iterators_and_adaptors"
 version = "0.1.0"
 edition = "2021"
 

@@ -7,7 +7,8 @@ use modules::{
     command_line_arg_and_env,
     cowsay,
     cowsay_options,
-    animals_from_the_environment
+    animals_from_the_environment,
+    manage_files_directories,
     
 };
 fn main() {
@@ -41,6 +42,22 @@ fn main() {
     //cowsay::cow_say();
     //cowsay_options::cow_say_options();
 
-    animals_from_the_environment::animals_from_the_environment();
-    
+    //animals_from_the_environment::animals_from_the_environment();
+
+    //manage_files_directories::read_file();
+    //manage_files_directories::read_to_file_string();
+
+    //manage_files_directories::write_to_file();
+    //manage_files_directories::write_content_to_file();
+    //manage_files_directories::write_avoid_over_writing();
+
+    // appending file 
+    //manage_files_directories::appending_file();
+
+    // removing file 
+    //manage_files_directories::removing_file();
+
+    // reading file in compile time
+    // manage_files_directories::reading_file_in_compile_time();
+    manage_files_directories::listing_directories();
 }

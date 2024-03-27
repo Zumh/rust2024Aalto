@@ -9,6 +9,10 @@ use modules::{
     cowsay_options,
     animals_from_the_environment,
     manage_files_directories,
+    copy_file,
+    move_file,
+    listing_file_paths,
+    append_to_file,
     
 };
 fn main() {
@@ -59,5 +63,18 @@ fn main() {
 
     // reading file in compile time
     // manage_files_directories::reading_file_in_compile_time();
-    manage_files_directories::listing_directories();
+    //manage_files_directories::listing_directories();
+    //manage_files_directories::option_or_result();
+
+    //manage_files_directories::propagate_main_error();
+    // manage_files_directories::create_remove();
+   // manage_files_directories::os_string();
+   //let result = manage_files_directories::temp_drop_before_use();
+   //print!("Result: {result:?}");
+
+    //copy_file::copy_file();
+    //move_file::move_file();
+    //listing_file_paths::listing_file_paths();
+    append_to_file::append_to_file_main();
+
 }

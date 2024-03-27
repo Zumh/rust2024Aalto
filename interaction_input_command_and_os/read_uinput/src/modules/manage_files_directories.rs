@@ -1,4 +1,4 @@
-use std::fs;
+use std::{io, fs};
 
 pub fn read_file() {
     let bytes = fs::read("./src/main.rs").expect("Unable to read file");
@@ -94,19 +94,77 @@ pub fn listing_directories() {
 }
 
 fn backup(filename: &str) -> Result<(), io::Error> {
-    let contents = match fs::read_to_string(filename) {
-        Ok(contents) => contents,
-        Err(e) => return Err(e),
-    };
+    let contents = fs::read_to_string(filename)?;
     let backup = format!("// this is a backup\n{contents}");
 
     let backup_path = format!("{filename}.backup");
-    match fs::write(&backup_path, backup) {
-        Ok(_) => println!("Contents of {filename} successfully backed up to {backup_path}!"),
-        Err(e) => return Err(e),
-    };
+    fs::write(&backup_path, backup)?;
+    println!("Contents of {filename} successfully backed up to {backup_path}!");
     Ok(())
 }
 
 
+// return option or result
+
+fn read_int() -> Option<i32> {
+    Some(io::stdin().lines().next()?.ok()?.parse().ok()?)
+}
+
+pub fn option_or_result () {
+    let a = read_int().unwrap();
+    let b = read_int().unwrap();
+    println!("{a} + {b} = {}", a + b);
+}
+
+// we can also propagate errors from the main
+pub fn propagate_main_error() -> Result<(), io::Error> {
+    backup("lib.rs")?;
+    Ok(())
+}
+
+// remove everything
+pub fn create_remove() -> std::io::Result<()> {
+    // return insuffecient permission
+    println!("{:?}", fs::create_dir("new_dir/subdir"));
+    println!("{:?}", fs::create_dir_all("new_dir/subdir"));
+    println!("{:?}", fs::remove_dir("new_dir"));
+    println!("{:?}", fs::remove_dir_all("new_dir"));
+    Ok(())
+}
+
+pub fn os_string(){
+    // The file_name method of DirEntry doesn't return a String or a &str 
+    // a compatibility feature in Rust which can store data in the different encodings different operating systems use 
+    //  OsString may contain non-valid UTF-8 unlike a String.
+    //  An OsString can't be displayed without debug format (:?)
+    // padding doesn't work on debug format, so we need to get a String or &str from the OsString.
+    // an OsString to a &str is to use the to_string_lossy method
+    // where invalid unicode characters are replaced with �
+    // technially return Clone-on-write smart pointer Cow<str>,
+    let os_string = std::ffi::OsString::from("chicken");
+    let string = os_string.to_string_lossy();
+    println!("{string:>20}"); // chicken!
+}
+
+pub fn temp_drop_before_use() -> std::io::Result<()> {
+
+    use std::fs::read_dir;
+    for entry in read_dir(".")? {
+        let entry = entry?;
+        let metadata = entry.metadata()?;
+        
+        // entry.file_name() returns a new OsString, which is not a reference to entry. 
+        // the referenced OsString gets dropped
+        let filename = entry.file_name();
+        // assigned to a new variable expand the life time of the string
+        let filename = filename.to_string_lossy();
+        println!(
+            "{filename:>20}: is_dir = {:<5}, len = {:<8}, created = {:?}",
+            metadata.is_dir(),
+            metadata.len(),
+            metadata.created()
+        );
+    }
+    Ok(())
+}
 

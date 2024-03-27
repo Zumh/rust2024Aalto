@@ -7,3 +7,7 @@ pub mod cowsay;
 pub mod cowsay_options;
 pub mod animals_from_the_environment;
 pub mod manage_files_directories;
+pub mod copy_file;
+pub mod move_file;
+pub mod listing_file_paths;
+pub mod append_to_file;
